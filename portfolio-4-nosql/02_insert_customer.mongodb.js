@@ -1,0 +1,20 @@
+
+use('anchorpay_nosql');
+
+db.customers.insertOne({
+  customer_id: 1,
+  full_name: "Ada Okafor",
+  email: "ada@example.com",
+  kyc: {
+    tier: "Tier 1",
+    daily_transfer_limit: 50000
+  },
+  accounts: [
+    {
+      account_number: "1000000001",
+      currency: "NGN",
+      balance: 60000,
+      status: "ACTIVE"
+    }
+  ]
+});
